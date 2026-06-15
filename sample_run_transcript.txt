@@ -1,0 +1,67 @@
+=== TEST RESULTS ===
+PASS  test_greeting
+PASS  test_capabilities_lists_sentiment
+PASS  test_sentiment_command_negative
+PASS  test_sentiment_command_positive
+PASS  test_empathy_prefix_on_negative_question
+PASS  test_faq_retrieval_still_works
+PASS  test_malformed_symbols_only
+PASS  test_out_of_scope_fallback
+PASS  test_emergency_intent
+
+9/9 tests passed.
+
+=== DEMO CONVERSATION ===
+[sentiment] No Azure credentials found; using local fallback.
+==================================================================
+  WellnessBot + Azure AI Language (sentiment-aware) chatbot
+==================================================================
+I'm an informational wellness bot, not a medical professional. For diagnosis, treatment, or emergencies, please contact a qualified healthcare provider or your local emergency number.
+Type 'help' for capabilities, 'sentiment <text>' to test the AI service, or 'quit' to exit.
+
+You: Hi there!
+WellnessBot: Hello! I'm WellnessBot, your general health and wellness assistant. Ask me about sleep, hydration, nutrition, exercise, stress, and more. Type 'help' to see what I can do.
+
+You: help
+WellnessBot: Here's what I can help with:
+  - sleep
+  - hydration
+  - nutrition / healthy eating
+  - exercise
+  - stress and anxiety
+  - healthy habits
+  - caffeine
+  - blood pressure
+  - common cold care
+I also read the sentiment of your messages using a cloud AI service, so I can respond more supportively.
+Commands you can type:
+  - 'help' or 'capabilities'  -> show this list
+  - 'sentiment <text>'        -> show the AI sentiment scores for <text>
+  - 'disclaimer'              -> show my medical disclaimer
+  - 'bye' or 'quit'           -> end the conversation
+Just ask a question in plain English and I'll do my best!
+
+You: I feel exhausted and stressed, how can I sleep better?
+WellnessBot: Sounds like a mix of ups and downs. Try a consistent bedtime, a cool and dark room, limiting caffeine after early afternoon, and avoiding screens for 30-60 minutes before bed.
+
+You: I'm feeling great today, any tips to build a healthy habit?
+WellnessBot: Love the positive energy! Start small, attach the new habit to an existing routine, track your progress, and be patient — consistency matters more than intensity at the beginning.
+
+You: how much water should I drink every day?
+WellnessBot: A common guideline is about 8 cups (roughly 2 liters) of fluids a day, but needs vary with body size, activity, and climate. A simple check: pale-yellow urine usually means you're well hydrated.
+
+You: sentiment I am so anxious and overwhelmed lately
+WellnessBot: Sentiment analysis -> negative (pos=0.00, neu=0.00, neg=1.00) via local
+
+You: !!!###
+WellnessBot: Hmm, I couldn't find any words in that. Could you rephrase as a sentence? Type 'help' to see what I can answer.
+
+You: what is the capital of France?
+WellnessBot: I'm not sure I understood that. I focus on general wellness topics. Try rephrasing, or type 'help' to see what I can answer.
+
+You: thanks so much, this is helpful
+WellnessBot: You're very welcome! Is there anything else I can help you with?
+
+You: bye
+WellnessBot: Take care of yourself! Remember to rest, hydrate, and move. Goodbye!
+
